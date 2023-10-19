@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 15px;
+    
+}
+footer {
+    background-color: #333;
+    color: #fff; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+main {
+    padding: 20px; /* To prevent content from overlapping with the header and footer */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 10px;
+}
+
+input, select {
+    width: 25vh;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+#calculate-button, #download-pdf-button{
+    color: red;
+    width: 24vh;
+    padding: 10px 0px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: left;
+}
+
+#loan-form {
+    text-align: left;
+    margin-top: 15px;
+    width: 50%;
+
+}
+
+#result {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+input.highlight-red,
+select.highlight-red,
+textarea.highlight-red {
+  border: 1px solid red;
+}
+
+@media (min-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: 50px 10px;
+    }
+}

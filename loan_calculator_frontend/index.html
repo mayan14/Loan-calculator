@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type= "text/css" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>Loan Calculator</header>
+        <form id="loan-form">
+            <label for="amount">Amount to Borrow:</label>
+            <input type="number" id="amount" required><br>
+
+            <label for="frequency">Payment Frequency:</label>
+            <select id="frequency" required>
+                <option value="Annually">Annually</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Every 6 Months">Every 6 Months</option>
+            </select><br>
+
+            <label for="period">Loan Period (in years):</label>
+            <input type="number" id="period" required><br>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required><br>
+
+            <label for="interest-type">Interest Type:</label>
+            <select id="interest-type" required>
+                <option value="Flat Rate">Flat Rate</option>
+                <option value="Reducing Balance">Reducing Balance</option>
+            </select><br>
+
+            <label for="bank">Bank:</label>
+            <select id="bank" required>
+                <option value="Bank A">Bank A</option>
+                <option value="Bank B">Bank B</option>
+            </select><br>
+
+            <button type="button" id="calculate-button">Calculate</button>
+        </form>
+
+        <div id="result">
+            <h2>Loan Details</h2>
+            <div id="loan-details">
+                <p><strong>Amount to borrow:</strong> <span id="borrow-amount"></span></p>
+                <p><strong>Bank:</strong> <span id="loan-bank"></span></p>
+                <p><strong>Interest Type:</strong> <span id="interest-type-result"></span></p>
+                <p><strong>Loan period in years:</strong> <span id="loan-period"></span></p>
+                <p><strong>Payment frequency:</strong> <span id="payment-frequency"></span></p>
+                <p><strong>Start date:</strong> <span id="loan-start-date"></span></p>
+                <p><strong>Total Cost:</strong> <span id="total-cost"></span></p>
+                <p><strong>Total Fees:</strong> <span id="total-fees"></span></p>
+                <p><strong>Total Interest:</strong> <span id="total-interest"></span></p>
+                <button type="button" id="download-pdf-button">Download PDF</button>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="app.js"></script>
+    <footer>Loan Calculator app</footer>
+</body>
+</html>
